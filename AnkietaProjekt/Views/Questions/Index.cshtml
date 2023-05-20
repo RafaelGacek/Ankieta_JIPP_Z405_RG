@@ -1,0 +1,53 @@
+﻿@model IEnumerable<AnkietaProjekt.Models.Question>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+    <div class="jumbotron w3-container w3-center w3-animate-bottom">
+        <h1>Baza Pytań!</h1>
+        <br />
+        <h3>Witaj Pracowniku!</h3>
+        <h3>Załaduj Pytania z pliku excel lub dodaj z formularza do bazy ! Pamiętaj jednak by starannie dobierać pytania! </h3>
+        <h3>Do Ankiety ładowane jest automatycznie 20 pierwszych pytań na twojej liście! Miłego dnia! </h3>
+    </div>
+
+<p>
+    @Html.ActionLink("Dodaj Pytanie", "Create")
+</p>
+<Reader>
+    <div class="row">
+        <div class="col-md-4">
+            @using (Html.BeginForm("OpenFile", "Questions", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <label>Załaduj plik excel</label>
+                <input type="file" class="form-control" name="excelFile" id="excelFile" />
+                <br />
+                <button class="btn btn-primary" type="submit"> zaladuj</button>
+            }
+        </div>
+    </div>
+</Reader>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Pytanie)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pytanie)
+        </td>
+        <td>
+            @Html.ActionLink("Edytuj", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Szczegóły", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Usuń", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

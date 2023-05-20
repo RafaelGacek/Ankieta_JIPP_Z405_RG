@@ -1,0 +1,342 @@
+﻿@model AnkietaProjekt.Models.Test
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Witaj! dziękujemy za wypełnienie naszej ankiety!</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+<div class="form-horizontal">
+
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div class="form-group">
+        @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.DisplayFor(model => model.Username)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.plec, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.plec, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.plec, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie1, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie1)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp1, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp1, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp1, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie2, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie2)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp2, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp2, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp2, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie3, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie3)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp3, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp3, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp3, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie4, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie4)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp4, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp4, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp4, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie5, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie5)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp5, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp5, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp5, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie6, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie6)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp6, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp6, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp6, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie7, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie7)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp7, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp7, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp7, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie8, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie8)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp8, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp8, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp8, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie9, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie9)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp9, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp9, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp9, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie10, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie10)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp10, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp10, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp10, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie11, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie11)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp11, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp11, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp11, "", new { @class = "text-danger" })
+        </div>
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie12, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie12)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp12, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp12, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp12, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie13, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie13)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp13, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp13, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp13, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie14, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie14)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp14, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp14, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp14, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie15, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie15)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp15, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp15, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp15, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie16, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie16)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp16, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp16, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp16, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie17, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie17)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp17, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp17, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp17, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie18, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie18)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp18, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp18, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp18, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie19, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie19)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp119, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp119, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp119, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.pytanie20, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.pytanie20)
+        </div>
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.odp20, htmlAttributes: new { @class = "control-label col-md-2" })
+        <div class="col-md-10">
+            @Html.EnumDropDownListFor(model => model.odp20, htmlAttributes: new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.odp20, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Prześlij" class="btn btn-default" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Powrót do Listy", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
